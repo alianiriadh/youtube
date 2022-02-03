@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-bars"></i></a>
       <a href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Clients</a>
@@ -30,20 +30,20 @@
           <button id="iconvoice"><i class="fas fa-microphone fa-lg"></i></button>
           <button id="icongrid"><i class="fas fa-border-none fa-2x"></i></button>
         </div>
-        <div id="right"><button>abc</button></div>
+        <div id="right">
+          <button id="dots"><i class="fas fa-ellipsis-v fa-lg"></i></button>
+          <button id="connect"><i class="far fa-user-circle"></i> SE CONNECTER</button>
+        </div>
       </div>
     </div>
 
     <script>
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
-
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
       }
-
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
-
         document.body.style.backgroundColor = "white";
       }
     </script>

@@ -1,10 +1,12 @@
 body {
   font-family: "Lato", sans-serif;
   transition: background-color 0.5s;
+  margin: 10px;
 }
 
 .header {
-  width: 100%;
+  width: 99%;
+  position: fixed;
 }
 #left {
   float: left;
@@ -31,7 +33,6 @@ body {
   float: right;
   width: 20%;
   height: 40px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,6 +78,27 @@ body {
   width: 64px;
   margin: 0;
 }
+#dots {
+  border: none;
+  background-color: transparent;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 64px;
+  margin: 0;
+}
+#connect {
+  height: 100%;
+  width: 80%;
+  color: #196bd7;
+  font-size: 18px;
+  background-color: transparent;
+  border-color: #196bd7;
+  border-radius: 4px;
+  border-width: 1px;
+  text-align: center;
+  padding: 0px;
+}
 .sidenav {
   height: 100%;
   width: 0;
@@ -91,7 +113,7 @@ body {
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 8px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -106,9 +128,8 @@ body {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  left: 0;
   font-size: 36px;
-  margin-left: 50px;
 }
 
 #main {
