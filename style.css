@@ -4,9 +4,38 @@ body {
 }
 
 .header {
-  height: 56px;
-  padding: 0 16px;
   width: 100%;
+}
+#left {
+  float: left;
+  width: 20%;
+  height: 40px;
+  text-align: left;
+  background-color: #818181;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+#center {
+  float: left;
+  width: 60%;
+  height: 40px;
+  background: #00ff00;
+  text-align: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#right {
+  float: right;
+  width: 20%;
+  height: 40px;
+  background: #0000ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #bars {
   font-size: 20px;
@@ -17,7 +46,10 @@ body {
   height: 20px;
   padding-left: 10px;
 }
-
+#txtsearch {
+  width: 80%;
+  text-align: left;
+}
 .sidenav {
   height: 100%;
   width: 0;
