@@ -6,37 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube</title>
     <link rel="icon" href="assets/youtube.svg" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
+    />
     <script src="https://kit.fontawesome.com/4381d01fd8.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-bars"></i></a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <div class="headnav">
+        <span class="bars" onclick="closeNav()"
+          ><img src="https://img.icons8.com/material-two-tone/24/000000/menu--v1.png" class="menu-bars" />
+        </span>
+        <img src="assets/youtube logo.png" alt="" class="youtubelogo" />
+      </div>
+      <a href="#"><i class="fas fa-home"></i> &nbsp; Home</a>
+      <a href="#"><i class="far fa-compass"></i> &nbsp; Explore</a>
+      <a href="#"><i class="fab fa-accusoft"></i> Subscriptions</a>
     </div>
-    <div id="main">
-      <div class="header">
-        <div id="left">
-          <span id="bars" onclick="openNav()"
-            ><i class="fas fa-bars"></i> &nbsp; <img src="assets/youtube logo.png" id="youtubelogo" alt=""
-          /></span>
+    <div class="header">
+      <div class="grid">
+        <div class="left">
+          <span class="bars" onclick="openNav()"
+            ><img src="https://img.icons8.com/material-two-tone/24/000000/menu--v1.png" class="menu-bars" />
+          </span>
+          <img src="assets/youtube logo.png" alt="" class="youtubelogo" />
         </div>
-        <div id="center">
+        <div class="center">
           <input type="text" id="txtsearch" />
-          <button id="iconsearch"><i class="fas fa-search fa-lg"></i></button>
-          <button id="iconvoice"><i class="fas fa-microphone fa-lg"></i></button>
-          <button id="icongrid"><i class="fas fa-border-none fa-2x"></i></button>
+          <button id="btnsearch"></button>
+          <button id="btnmic"></button>
         </div>
-        <div id="right">
-          <button id="dots"><i class="fas fa-ellipsis-v fa-lg"></i></button>
-          <button id="connect"><i class="far fa-user-circle"></i> SE CONNECTER</button>
+        <div class="right">
+          <button id="btnvid"></button>
+          <button id="btngrid"></button>
+          <button id="btnbell"></button>
+          <img src="assets/profilepicture.jpg" id="profilepic" />
         </div>
       </div>
     </div>
-
+    <div class="mainbody">
+      <div class="leftbody">
+        <div id="youtubevideo">
+          <iframe
+            width="727"
+            height="409"
+            src="https://www.youtube.com/embed/Kqd8NCDHOfc?list=RDKqd8NCDHOfc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p id="title">NAMIRO - 7LILI NA | TABAC ROULE</p>
+        <p id="view">529,428 viewsMar 27, 2021</p>
+      </div>
+      <div class="rightbody">sdf</div>
+    </div>
     <script>
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
