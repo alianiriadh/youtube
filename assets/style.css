@@ -1,0 +1,122 @@
+.grid {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.center {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#youtubelogo {
+  width: 90px;
+  vertical-align: middle;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+#menu-bars {
+  width: 30px;
+  vertical-align: middle;
+  margin-top: 3%;
+  margin-left: 50px;
+}
+#txtsearch {
+  width: 60%;
+  height: 36px;
+  border: 1px solid #cccccc;
+  margin-right: 0;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+#txtsearch:focus {
+  border-color: #196bd7;
+  outline: none;
+  border-radius: 2px;
+}
+
+#btnsearch {
+  margin-top: 8px;
+  border: 1px solid #c6c6c6;
+  background-color: #f9f9f9;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+
+  background-image: url(search.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 35%;
+}
+#btnsearch:hover {
+  background-color: #f0f0f0;
+}
+#btnmic {
+  margin-top: 8px;
+  margin-left: 20px;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+
+  background-image: url(mic.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60%;
+}
+#btnvid {
+  margin-top: 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  background-image: url(videocam.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#btngrid {
+  margin-top: 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  background-image: url(grid.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: 100%; */
+}
+#btnbell {
+  margin-top: 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  background-image: url(bell.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: 50%; */
+}
+#profilepic {
+  margin-top: 8px;
+  margin-left: 20px;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+
+  background-image: url(profilepicture.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
