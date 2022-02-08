@@ -4,75 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YouTube</title>
     <link rel="icon" href="assets/youtube.svg" />
-    <link rel="stylesheet" href="assets/style.css" />
+    <title>YouTube</title>
+
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
     />
+
     <script src="https://kit.fontawesome.com/4381d01fd8.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="mySidenav" class="sidenav">
-      <div class="headnav">
-        <span class="bars" onclick="closeNav()"
-          ><img src="https://img.icons8.com/material-two-tone/24/000000/menu--v1.png" class="menu-bars" />
-        </span>
-        <img src="assets/youtube logo.png" alt="" class="youtubelogo" />
-      </div>
-      <a href="#"><i class="fas fa-home"></i> &nbsp; Home</a>
-      <a href="#"><i class="far fa-compass"></i> &nbsp; Explore</a>
-      <a href="#"><i class="fab fa-accusoft"></i> Subscriptions</a>
-    </div>
-    <div class="header">
-      <div class="grid">
-        <div class="left">
-          <span class="bars" onclick="openNav()"
-            ><img src="https://img.icons8.com/material-two-tone/24/000000/menu--v1.png" class="menu-bars" />
-          </span>
-          <img src="assets/youtube logo.png" alt="" class="youtubelogo" />
+    <div class="container">
+      <div class="container-grid">
+        <!----------------------------------- Header ----------------------------------------------------->
+        <div class="header">
+          <!-- ?  BEGIN bars + logo -->
+          <div class="logo">
+            <span class="bars" onclick="closeNav()"
+              ><img src="https://img.icons8.com/material-two-tone/24/000000/menu--v1.png" alt="" class="menu-bars" />
+            </span>
+            <img src="assets/youtube-logo.png" alt="" class="youtubelogo" />
+          </div>
+          <!-- ?  END bars + logo -->
+          <!-- !  BEGIN search area  -->
+          <div class="input">
+            <input type="text" id="txtsearch" />
+            <button id="btnsearch"></button>
+            <button id="btnmic"></button>
+          </div>
+          <!-- !  END search area  -->
+          <!-- ? Left Side -->
+          <div class="leftside">
+            <button id="btnvid"></button>
+            <button id="btngrid"></button>
+            <button id="btnbell"></button>
+            <img src="assets/profilepicture.jpg" alt="" id="profilepic" />
+          </div>
+          <!-- ? END Left Side -->
         </div>
-        <div class="center">
-          <input type="text" id="txtsearch" />
-          <button id="btnsearch"></button>
-          <button id="btnmic"></button>
+        <!-- -------------------------------- End Header -------------------------------------------------->
+
+        <div class="middle">
+          <div id="youtubevideo">
+            <iframe
+              id="frame"
+              width="727"
+              height="409"
+              src="https://www.youtube.com/embed/Kqd8NCDHOfc?list=RDKqd8NCDHOfc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <span id="title">NAMIRO - 7LILI NA | TABAC ROULE</span> <br />
+          <span id="views"></span>
+          <div class="interactions">
+            <div class="leftinter">565,298 views * Mar 27, 2021</div>
+            <div class="rightinter">
+              <img src="assets/like.png" alt="" class="inter" /><b> 16K</b>
+              <img src="assets/disklike.png" alt="" class="inter" /><b> DISLIKE</b>
+              <img src="assets/share.png" alt="" class="inter" /><b> SHARE</b>
+              <img src="assets/save.png" alt="" class="inter" /><b> SAVE</b>
+            </div>
+          </div>
+          <hr />
         </div>
         <div class="right">
-          <button id="btnvid"></button>
-          <button id="btngrid"></button>
-          <button id="btnbell"></button>
-          <img src="assets/profilepicture.jpg" id="profilepic" />
+          <div><img src="assets/suggestion.webp" alt="" class="preview" /> <b>video Title</b></div>
+          <div><img src="assets/suggestion.webp" alt="" class="preview" /> <b>video Title</b></div>
+          <div><img src="assets/suggestion.webp" alt="" class="preview" /> <b>video Title</b></div>
+          <div><img src="assets/suggestion.webp" alt="" class="preview" /> <b>video Title</b></div>
+          <div><img src="assets/suggestion.webp" alt="" class="preview" /> <b>video Title</b></div>
+          <div><img src="assets/suggestion.webp" alt="" class="preview" /> <b>video Title</b></div>
         </div>
       </div>
     </div>
-    <div class="mainbody">
-      <div class="leftbody">
-        <div id="youtubevideo">
-          <iframe
-            width="727"
-            height="409"
-            src="https://www.youtube.com/embed/Kqd8NCDHOfc?list=RDKqd8NCDHOfc"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <p id="title">NAMIRO - 7LILI NA | TABAC ROULE</p>
-        <p id="view">529,428 viewsMar 27, 2021</p>
-      </div>
-      <div class="rightbody">sdf</div>
-    </div>
-    <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-      }
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.body.style.backgroundColor = "white";
-      }
-    </script>
   </body>
 </html>

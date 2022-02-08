@@ -1,142 +1,203 @@
 body {
-  font-family: "Lato", sans-serif;
-  transition: background-color 0.5s;
-  margin: 10px;
+  margin: 0;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    " middle middle middle middle middle right";
+}
+.logo {
+  margin-left: 10px;
+  display: table-cell;
 }
 
 .header {
-  width: 99%;
-  position: fixed;
-}
-#left {
-  float: left;
-  width: 20%;
-  height: 40px;
+  grid-area: header;
   text-align: left;
-
-  display: flex;
-  align-items: center;
-  justify-content: left;
+  font-size: 35px;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  padding-bottom: 20px;
+  margin-top: 20px;
 }
-
-#center {
-  float: left;
-  width: 60%;
-  height: 40px;
-
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-#right {
-  float: right;
-  width: 20%;
-  height: 40px;
-  display: flex;
-  align-items: center;
+.input {
   justify-content: center;
+  display: flex;
 }
-#bars {
-  font-size: 20px;
-  cursor: pointer;
-  height: 20px;
+.leftside {
+  text-align: right;
+  margin-right: 10px;
 }
-#youtubelogo {
-  height: 20px;
-  padding-left: 10px;
-  width: 60%;
+.middle,
+.right {
+  padding-top: 10px;
+  /* Should be removed. Only for demonstration */
+  height: calc(100vh - 33%);
 }
-#txtsearch {
-  width: 70%;
-  height: 90%;
-  border: 1px solid #cccccc;
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
 }
-#iconsearch {
-  border: 1px solid #cccccc;
-  background-color: #f0f0f0;
-  border-radius: 0 2px 2px 0;
-  cursor: pointer;
-  height: 40px;
-  width: 64px;
-  margin: 0;
+
+/* Style the right column */
+
+.youtubelogo {
+  width: 90px;
 }
-#iconvoice {
+
+.menu-bars {
+  width: 30px;
+  margin-top: 0;
+}
+#profilepic {
+  margin-top: 8px;
+  margin-left: 20px;
   border: none;
   background-color: #f9f9f9;
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
-  margin-left: 5px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+
+  background-image: url(profilepicture.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-#icongrid {
+#btnsearch {
+  margin-top: 8px;
+  border: 1px solid #c6c6c6;
+  background-color: #f9f9f9;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  background-image: url(assets/search.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 35%;
+}
+#btnsearch:hover {
+  background-color: #f0f0f0;
+}
+#btnmic {
+  margin-top: 8px;
+  margin-left: 20px;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+
+  background-image: url(assets/mic.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60%;
+}
+#btnvid {
+  margin-top: 8px;
   border: none;
   background-color: transparent;
   border-radius: 0 2px 2px 0;
   cursor: pointer;
   height: 40px;
-  width: 64px;
-  margin: 0;
+  width: 60px;
+  background-image: url(assets/videocam.png);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-#dots {
+#btngrid {
+  margin-top: 8px;
   border: none;
   background-color: transparent;
   border-radius: 0 2px 2px 0;
   cursor: pointer;
   height: 40px;
-  width: 64px;
-  margin: 0;
+  width: 60px;
+  background-image: url(assets/grid.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: 100%; */
 }
-#connect {
-  height: 100%;
-  width: 80%;
-  color: #196bd7;
-  font-size: 18px;
+#btnbell {
+  margin-top: 8px;
+  border: none;
   background-color: transparent;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  background-image: url(assets/bell.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: 50%; */
+}
+#txtsearch {
+  width: 60%;
+  height: 37px;
+  border: 1px solid #cccccc;
+  margin-top: 8px;
+  border-radius: 2px;
+  padding-top: 0px;
+}
+#txtsearch:focus {
   border-color: #196bd7;
-  border-radius: 4px;
-  border-width: 1px;
-  text-align: center;
-  padding: 0px;
+  outline: none;
+  border-radius: 2px;
 }
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: white;
-  overflow-x: hidden;
-  transition: 0.2s;
-  padding-top: 60px;
+#youtubevideo {
+  width: 90%;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+  margin-left: 60px;
 }
-
-.sidenav a {
-  padding: 8px 8px 8px 8px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav .closebtn {
+#frame {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 36px;
+  width: 100%;
+  height: 100%;
+}
+#title {
+  line-height: 50px;
+  margin-left: 60px;
+  font-size: 18px;
+}
+#views {
+  margin-left: 60px;
+  font-size: 14px;
+  color: gray;
 }
 
-#main {
-  transition: margin-left 0.5s;
+.interactions {
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-left: 60px;
 }
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
+.leftinter {
+  font-size: 14px;
+  color: gray;
+}
+.inter {
+  margin-left: 20px;
+  cursor: pointer;
+}
+hr {
+  width: 90%;
+  margin-left: 60px;
+}
+.right {
+  grid-area: right;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, 1fr);
+  justify-content: space-between;
+  align-content: flex-start;
 }
